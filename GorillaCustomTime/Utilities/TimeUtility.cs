@@ -16,14 +16,14 @@ namespace GorillaCustomTime.Utilities
 
         public static void SetTimeOfDay(int index)
         {
-            index = Mathf.Clamp(index, 0, TimeManager.timeOfDayRange.Length);
+            index = Mathf.Clamp(index, 0, TimeManager.timeOfDayRange.Length - 1);
             TimeManager.SetTimeOfDay(index);
             TimeManager.SetOverrideIndex(index);
         }
 
         public static string GetTimeOfDayName(int index)
         {
-            index = Mathf.Clamp(index, 0, TimeManager.timeOfDayRange.Length - 1);
+            index = Mathf.Clamp(index, 0, TimeManager.dayNightLightmapNames.Length - 1);
             return TimeManager.dayNightLightmapNames[index];
         }
 
